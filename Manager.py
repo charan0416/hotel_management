@@ -28,9 +28,9 @@ class Manager :
         available_rooms = self.rooms - len(self.guests)
         # if len(self.guests) != 0:
         #     print("Rooms are available")
-        if available_rooms == 0:
+        if available_rooms <= 0:
             print("Rooms are full")
-        else:
+        elif available_rooms != 0 and len(self.guests)<=10:
             print(f"Only {len(self.guests)} is filled out of 10")
 
     def remove_guest(self):
