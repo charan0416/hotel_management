@@ -1,5 +1,6 @@
 from Manager import *
-
+print("WELCOME TO LEMON TREE PREMIER \n"
+      "PLEASE CHOOSE THE SERVICE")
 class OperationsManager:
     def __init__(self):
         self.manager = Manager()
@@ -38,10 +39,11 @@ class OperationsManager:
             elif choice == 5:
                 self.manager.price()
             elif choice == 6 :
-                self.manager.food()
+                self.manager.foods()
             else:
                 print("Exiting the program.")
                 break
 
 ob = OperationsManager()
 ob.run()
+

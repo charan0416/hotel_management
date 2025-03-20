@@ -14,7 +14,7 @@ class Manager :
         phone_number = int(input("enter phone number"))
         self.guests.append(name)
 
-        print(f"new guest added :{name},{phone_number}")
+        print(f"WELCOME TO LEMON TREE PREMIER HOTELS :{name}")
 
     def list_guests(self):
         if len(self.guests) == 0:
@@ -22,7 +22,7 @@ class Manager :
             return
         else:
             for guests in self.guests:
-                print(guests)
+                print(f"guest name {guests}")
 
     def check_rooms(self):
         available_rooms = self.rooms - len(self.guests)
@@ -39,13 +39,19 @@ class Manager :
             if guests == name:
                 self.guests.remove(guests)
             print("guest removed successfully")
+            break
 
     def price(self):
-        print("price of room is 5000")
+        print("price of deleux roomis 5000")
 
-    def food(self):
+    def foods(self):
+        food_menu = ["burger","pizza","alcohol","biryani","butter chicken","roti","water bottle","soft drinks"]
         food = input("enter the food name")
-        print("food will be delivered in 15 min")
+        if food in food_menu:
+            print("food will be delivered in 15 min")
+        else:
+            print("please only choose from menu")
+
 
 
 
